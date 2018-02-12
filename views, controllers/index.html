@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>views, controllers</title>
+        <style>
+            .blue{
+                color: blue;
+            }
+            .italic{
+                font-style: italic;
+            }
+            .red{
+                color: red;
+            }
+            .bold{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body ng-app="app" ng-controller="myCtrl">
+        <h1>{{greetings}}</h1>
+        <button ng-click="timesClicked()">Click Me</button><p>{{value}}</p>
+        <ul>
+            <li ng-repeat="item in items">item-{{item}}</li>
+        </ul>
+        <div ng-class="{'blue': even, 'italic':even, 'red': !even, 'bold': !even}">
+            <p ng-show="even">Even</p>
+            <p ng-hide="even">Odd</p>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
